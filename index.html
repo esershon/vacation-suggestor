@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <script src="js/jquery-3.1.1.js"></script>
-    <script src="js/scripts.js"></script>
-    <title>Vacation Suggester</title>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Discover Your Personal Perfect Vacation Destination!</h1>
+<head>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.1.1.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Vacation Suggester</title>
+</head>
+<body>
+  <div class="container" id="questions">
+    <h1>Discover Your Personal Perfect Vacation Destination!</h1>
+<form id="vacation">
     <!--name-->
     <div class="form-group">
       <label for="name">Please enter your name</label>
@@ -17,70 +18,81 @@
     </div>
     <!--breathing method-->
     <div>
-    <label for="address">How do you breathe?</label>
-    <select class="form-control" id="breathing">
-      <option>Lungs</option>
-      <option>Gills</option>
-      <option>I have both</option>
-    </select>
-  </div>
+      <label for="address">How do you breathe?</label>
+      <select class="form-control" id="breathing">
+        <option value="lungs">Lungs</option>
+        <option value="gills">Gills</option>
+        <option value="both">I have both</option>
+      </select>
+    </div>
     <!--pressure tolerance-->
     <div>
-    <label for="address">What kind of pressures are you ok in?</label>
-    <select class="form-control" id="pressure">
-      <option>As long as it's less than</option>
-      <option>As long as it's more than</option>
-      <option>I can withstand and amount of pressure, great or small!</option>
-    </select>
+      <label for="address">What kind of pressures are you ok in?</label>
+      <select class="form-control" id="pressure">
+        <option value="low">As long as it's less than</option>
+        <option value="high">As long as it's more than</option>
+        <option value="all">I can withstand and amount of pressure, great or small!</option>
+      </select>
+    </div>
+    <!--marginalized status-->
+    <label>Are you part of a marginalized class?</label>
+    <br>
+    <div class="radio-inline">
+      <label>
+        <input type="radio" name="marginalized" value="yes" checked>
+        Yes
+      </label>
+    </div>
+    <div class="radio-inline">
+      <label>
+        <input type="radio" name="marginalized" value="no">
+        No
+      </label>
+    </div>
+    <br>
+    <!--travelling with children or pets-->
+    <label>Are you travelling with children or pets?</label>
+    <br>
+    <div class="radio-inline">
+      <label>
+        <input type="radio" name="children" value="yes" checked>
+        Yes
+      </label>
+    </div>
+    <div class="radio-inline">
+      <label>
+        <input type="radio" name="children" value="no">
+        No
+      </label>
+    </div>
+    <br>
+    <button type="submit" class="btn">Get my results!</button>
+  </form>
   </div>
-  <!--marginalized status-->
-  <label>Are you part of a marginalized class?</label>
-<br>
-  <div class="radio-inline">
-    <label>
-      <input type="radio" name="marginalized" value="yes" checked>
-      Yes
-    </label>
+<div class="container">
+  <div class="panel panel-default" id="results">
+    <div class="panel-heading">
+      <h3 class="panel-title"><span class="name"><span>'s Perfect Vacation</h3>
+    </div>
+    <div class="panel-body">
+      <div id="mars">
+        <!--You should visit Mars-->
+        It's a one-way trip, hope that's cool You should do it! MARS!
+      </div>
+      <div id="timetravel">
+        <!--You should travel through time-->
+        Go to the past in a time machine! How super! Much fun!
+      </div>
+      <div id="thesea">
+        <!--You should explore the oceans-->
+        Explore the ocean by vacationing under water! Your gills and pressure tolerance really make this an ideal vacation spot for you! Don't forget a headlamp!
+      </div>
+      <div id="plzstayhome">
+        <!--You should stay home probly-->
+        You should probably stay home with your child or pet. It's not safe for you out there.
+      </div>
+    </div>
   </div>
-  <div class="radio-inline">
-    <label>
-      <input type="radio" name="marginalized" value="no">
-      No
-    </label>
-  </div>
-  <br>
-  <!--travelling with children or pets-->
-  <label>Are you travelling with children or pets?</label>
-  <br>
-  <div class="radio-inline">
-    <label>
-      <input type="radio" name="children" value="yes" checked>
-      Yes
-    </label>
-  </div>
-  <div class="radio-inline">
-    <label>
-      <input type="radio" name="children" value="no">
-      No
-    </label>
-  </div>
-  <div id="mars">
-    <!--You should visit Mars-->
-    It's a one-way trip, hope that's cool You should do it! MARS!
-  </div>
-  <div id="timetravel">
-    <!--You should travel through time-->
-    Go to the past in a time machine! How super! Much fun!
-  </div>
-  <div id="thesea">
-    <!--You should explore the oceans-->
-    Eplore the ocean by vacationing under water! Your gills and pressure tolerance really make this an ideal vacation spot for you! Don't forget a headlamp!
-  </div>
-  <div id="plzstayhome">
-    <!--You should stay home probly-->
-    You should probably stay home with your child or pet. It's not safe for you out there.
-  </div>
-
 </div>
-  </body>
+</body>
 </html>
