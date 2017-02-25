@@ -21,7 +21,7 @@ $(document).ready(function() {
    $('#questions').hide();
    $(".name").text(name);
 
-   if (breathing === "gills"){ // If you don't have lungs, go to the sea
+   if (breathing === "gills"){ // If you don't have lungs, go to the sea.
      $("#thesea").show();
      $('.vacationSpot').text("The Ocean Depths");
    } else if (marginalized === "no" && children === "yes") { // If you have lungs, privilege, and children, time travel.
@@ -33,16 +33,16 @@ $(document).ready(function() {
    } else if (marginalized === "no" && children === "no") { //If you have lungs, privilege, no children, and you are ok with low pressures, go to Mars.
      $('#mars').show();
      $('.vacationSpot').text("Mars");
-   } else if (breathing === "both" && pressure != "low" && children === "no") {
+   } else if (breathing === "both" && pressure != "low" && children === "no") { //If you have gills, are marginalized, are ok with high pressure, have no children, go to the sea.
      $('#thesea').show();
      $('.vacationSpot').text("The Ocean Depths");
-   } else if (children === "no") {
+   } else if (children === "no") { // If you have lungs, are marginalized, have no children, and didn't just go to the sea, go to Mars.
      $('#mars').show();
      $('.vacationSpot').text("Mars");
-   } else if (children === "yes" && breathing === "both"){
+   } else if (children === "yes" && breathing === "both"){ // If you have gills, are marginalized, and have children, go to the sea.
      $('#thesea').show();
      $('.vacationSpot').text("The Ocean Depths");
-   } else {
+   } else { // Left over: If you have only lungs, are marginalized, and have children, stay home.
      $('#plzstayhome').show();
      $('.vacationSpot').text("Nah, Nevermind");
 
