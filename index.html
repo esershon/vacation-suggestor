@@ -5,11 +5,11 @@
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <script src="js/jquery-3.1.1.js"></script>
   <script src="js/scripts.js"></script>
-  <title>Vacation Suggester</title>
+  <title>Vacation Suggestor</title>
 </head>
 <body>
   <div class="container" id="questions">
-    <h1>Discover Your Personal Perfect Vacation Destination!</h1>
+    <h1>Discover Your Perfect Vacation Destination!</h1>
 <form id="vacation">
     <!--name-->
     <div class="form-group">
@@ -21,10 +21,11 @@
       <label for="address">How do you breathe?</label>
       <select class="form-control" id="breathing">
         <option value="lungs">Lungs</option>
-        <option value="gills">Gills</option>
+        <option value="gills">Gills. I am a fish, technically.</option>
         <option value="both">I have both</option>
       </select>
     </div>
+    <br>
     <!--pressure tolerance-->
     <div>
       <label for="address">What kind of pressures can you withstand?</label>
@@ -34,8 +35,9 @@
         <option value="all">I have no pressure preference, great or small.</option>
       </select>
     </div>
+    <br>
     <!--marginalized status-->
-    <label>Are you part of a marginalized class?</label>
+    <label>Are you a person of color and/or a woman and/or part of another marginalized class?</label>
     <br>
     <div class="radio-inline">
       <label>
@@ -49,6 +51,7 @@
         No
       </label>
     </div>
+    <br>
     <br>
     <!--travelling with children or pets-->
     <label>Are you travelling with children or pets?</label>
@@ -66,33 +69,48 @@
       </label>
     </div>
     <br>
-    <button type="submit" class="btn">Get my results!</button>
+    <br>
+    <button type="submit" class="btn btn-primary">Get my results!</button>
   </form>
   </div>
-<div class="container">
-  <div class="panel panel-default" id="results">
+<div class="container" id="results">
+  <br>
+  <div class="panel panel-default">
     <div class="panel-heading">
-      <h3 class="panel-title"><span class="name"></span>'s Perfect Vacation</h3>
+      <h3 class="panel-title"><span class="name"></span>'s Perfect Vacation Spot: <span class="vacationSpot"></span></h3>
     </div>
     <div class="panel-body">
       <div id="mars">
         <!--You should visit Mars-->
-        It's a one-way trip, hope that's cool You should do it! MARS!
+        <p>Congratulations! Your perfect vacation spot is Mars! Good thing you have no dependents because it's a one way trip and you're never coming back ever.</p>
+        <p>#longestvacation #infinitefun</p>
+        <br>
+        <br>
+        <img src="https://cdn1.vox-cdn.com/uploads/chorus_asset/file/3418172/140629-marsone_455ed2433a7a42caeda4621254b50da2.0.jpg" width=1000px alt="">
       </div>
       <div id="timetravel">
         <!--You should travel through time-->
-        Go to the past in a time machine! How super! Much fun!
+        <p>Ooooooh, you privileged vacationer, you! Hop in a time machine and visit your favorite era of the past! How super! Much fun!</p>
+        <img src="https://s-media-cache-ak0.pinimg.com/564x/b7/ce/fe/b7cefe15d27885f9691d33068a3fc0ce.jpg" width=600px alt="">
       </div>
       <div id="thesea">
         <!--You should explore the oceans-->
-        Explore the ocean by vacationing under water! Your gills and pressure tolerance really make this an ideal vacation spot for you! Don't forget a headlamp!
+        <p>Explore the ocean by vacationing under water! Your gills and pressure tolerance really make this an ideal vacation spot for you. And if you never had lungs in the first place, I hope you're already down there. Thankfully, the ocean is vast. From the Sunlight Zone to the Abyss, there's so much to explore! Don't forget a headlamp!</p>
+        <br>
+        <br>
+        <img src="https://i.kinja-img.com/gawker-media/image/upload/s--UQP1uTny--/c_scale,f_auto,fl_progressive,q_80,w_800/1208820717388032428.gif" width=1000px alt="Into the Abyss">
       </div>
       <div id="plzstayhome">
         <!--You should stay home probly-->
-        You should probably stay home with your child or pet. It's not safe for you out there.
+        <p>You should probably just stay home with your child or pet. It's not safe for you guys out there!</p>
+        <br>
+        <br>
+        <img src="https://s-media-cache-ak0.pinimg.com/736x/a2/e9/c5/a2e9c54a0c3190d3954f26ee70b6780c.jpg" alt="Safe at Home with Dog">
       </div>
     </div>
   </div>
+  <div>
+<button id="again" type="button" class="btn btn-primary">Boo, let me try again!</button>  </div>
 </div>
 </body>
 </html>
